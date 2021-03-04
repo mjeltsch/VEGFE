@@ -1,6 +1,8 @@
 # VEGFE
 
-#Phylogenetic analysis of VEGF-Es
+## Phylogenetic analysis of VEGF-Es
+
+### Description of the workflow
 
 A Psiblast limited to the taxon Viridae (taxid:10239) was run against the starting sequence AAD03735.1 (vascular endothelial growth factor homolog VEGF-E from Orf virus) until no new sequences were found above the 0.005 threshold. The Fasta descriptions were adjusted to include virus name abbreviations and host species.
 
@@ -28,17 +30,17 @@ STTSALTPGPAAAAADAAASSVAKGGA
 
 13 host species (6 mammals, 7 fish):
 
-Ovis aries
-Capra hircus
-Homo sapiens
-Bos taurus
-Cervus elaphus
-Zalophus californianus
+* Ovis aries
+* Capra hircus
+* Homo sapiens
+* Bos taurus
+* Cervus elaphus
+* Zalophus californianus
 
-Lates calcarifer
-Epinephelus coioides
-Seriola dumerili
-Scophthalmus maximus
-Cyprinus carpio
-Neolamprologus brichardi
-Sphaeramia orbicularis
+* Lates calcarifer
+* Epinephelus coioides
+* Seriola dumerili
+* Scophthalmus maximus
+* Cyprinus carpio
+* Neolamprologus brichardi
+* Sphaeramia orbicularis
