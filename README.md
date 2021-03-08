@@ -2,6 +2,12 @@
 
 ## Phylogenetic analysis of VEGF-Es
 
+### System requirements
+
+The workflow was tested (and will likely work) only on Ubuntu Linux 18.04 or 20.04. Requirements are:
+
+t_coffee, PhyML and the ETE3 toolkit. The script uses some functions from phylolib.py, and this library might require the installation of a few other python modules, which can be done via the pip3 package manager.
+
 ### Description of the workflow
 
 A Psiblast limited to the taxon Viridae (taxid:10239) was run against the starting sequence AAD03735.1 (vascular endothelial growth factor homolog VEGF-E from Orf virus) until no new sequences were found above the 0.005 threshold. The Fasta descriptions were adjusted to include virus name abbreviations and host species.
