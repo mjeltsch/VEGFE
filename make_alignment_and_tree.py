@@ -12,6 +12,8 @@ from ete3 import Tree, TreeStyle, AttrFace, TextFace, NodeStyle, SequenceFace, I
 # A Psi blast  limited to the taxon Viridae was run against the starting sequence AAD03735.1 until
 # no new sequences were found above the 0.005 threshold. yielding 84 sequences.
 # Fasta names were ajusted to include the host species (resulting in file seqdump_modified_names.fasta).
+#
+# ete3 installation does not pull automatically all dependencies! You need to install PyQt5 manually!
 
 def do_alignment(infile, outfile):
     execute_subprocess(
