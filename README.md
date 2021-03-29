@@ -6,7 +6,10 @@
 
 The workflow was tested (and will likely work) only on Ubuntu Linux 18.04 or 20.04. Requirements are:
 
-t_coffee, PhyML and the ETE3 toolkit. The script uses some functions from phylolib.py, and this library might require the installation of a few other python modules, which can be done via the pip3 package manager.
+t_coffee, PhyML and the ETE3 toolkit. The script uses some functions from phylolib.py, and this library might require the installation of a few other python modules, which can be done via the pip3 package manager. Most notably, the script needs PyQt5. However (at least under Ubuntu 20.04), you MUST install it via the pip package manager, because the PyQt5 module from the Ubuntu repository DOES NOT WORK (command: sudo pip3 install PyQt5). t_coffee and PhyML can be installed from the Ubuntu repository (package names t-coffee and phyml, respectively), but t_coffee will complain about missing dialign and clustalw. These are installed as dependencies together with t_coffee, but are not found due to a naming discrepancy. To fix this problem, you can make symlinks in /bin like this:
+sudo ln -s /usr/bin/dialign-tx /bin/dialign-t
+sudo ln -s /usr/bin/clustalw /bin/clustalw2
+There are a few other alignment programs that you can install to improve the result and you can see the list of installed and missing alignment methods simply by typing t_coffee into a commandline window. Obviously the final alignment results might slightly differ depending on your setup.
 
 ### Description of the workflow
 
