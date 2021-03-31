@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 #
-import os, sqlite3, ntpath, types, shutil, glob
+import os, sqlite3, ntpath, types, shutil, glob, multiprocessing
 from Bio import SeqIO
 from Bio import Entrez
 from pathlib import Path
@@ -53,8 +53,9 @@ def make_tree(file):
     # b (bootstrap): -1 is aLRT statistics, for final analysis use: -b 100 or 1000 (on a fast computer)
     mpirun_path = shutil.which('mpirun')
     phymlmpi_path = shutil.which('phyml-mpi')
+    number_of_cores = multiprocessing.cpu_count()
     if mpirun_path != '' and phymlmpi_path != '':
-        phylo_command = 'mpirun -n 4 phyml-mpi -i {0} -d aa -b 1000'.format(file)
+        phylo_command = 'mpirun -n {0} phyml-mpi -i {1} -d aa -b 1000'.format(number_of_cores, file)
     else:
         phylo_command = 'phyml -i {0} -d aa -b -1'.format(file)
 
